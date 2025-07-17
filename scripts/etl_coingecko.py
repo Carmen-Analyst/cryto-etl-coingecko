@@ -32,3 +32,21 @@ plt.xlabel('Fecha')
 plt.ylabel('Precio')
 plt.legend()
 plt.show()
+
+
+
+import pandas as pd
+
+# Ruta al archivo generado por tu ETL
+df = pd.read_csv('data/btc_exchange_rates.csv', parse_dates=['date'])
+
+# Muestra las primeras filas
+print(df.head())
+
+# Muestra info básica: columnas, tipos, nulos
+print("\n📊 Info general:")
+print(df.info())
+
+# Estadísticas básicas
+print("\n📈 Estadísticas descriptivas:")
+print(df.describe())
