@@ -28,6 +28,8 @@ plt.ylabel('Spread')
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+plt.savefig('../../images/kpi1_linea_temporal_spread.png', dpi=300, bbox_inches='tight')
+
 
 # Boxplot por hora del día
 df['hour'] = df['date'].dt.hour
@@ -38,6 +40,8 @@ plt.xlabel('Hora')
 plt.ylabel('Spread')
 plt.tight_layout()
 plt.show()
+plt.savefig('../../images/kpi1_boxplot_spread_por_hora.png', dpi=300, bbox_inches='tight')
+
 #interpretación kpi 1
 print("\n🔎 Interpretación KPI 1:")
 print("El spread medio positivo indica que BTC suele tener un valor mayor frente al USD que frente al EUR.")
@@ -66,7 +70,7 @@ plt.xlabel('Tipo de cambio implícito')
 plt.ylabel('Frecuencia')
 plt.tight_layout()
 plt.show()
-
+plt.savefig('../../images/kpi2_histograma_tipo_cambio.png', dpi=300, bbox_inches='tight')
 # Línea temporal
 plt.figure(figsize=(12,6))
 sns.lineplot(data=df, x='date', y='tipo_cambio', color='purple')
@@ -76,6 +80,7 @@ plt.ylabel('Tipo de cambio implícito')
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+plt.savefig('../../images/kpi2_tipo_cambio_eur_usd.png', dpi=300, bbox_inches='tight')
 
 #interpretación del kpi 2
 
